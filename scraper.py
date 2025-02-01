@@ -42,10 +42,10 @@ def scrape_faculty_info(search_term):
                 for item in data['d']['results']:
                     faculty_info = {
                         'Name': item.get('Title', ''),
-                        'Role': item.get('i0p3', ''),  # You might need to adjust these field names
+                        'Number': item.get('i0p3', ''),  # You might need to adjust these field names
                         'Department': item.get('OData__x006d_zy6', ''),
-                        'Email': item.get('fcqq', ''),
-                        'Phone': item.get('xfhg', '')
+                        'Role': item.get('fcqq', ''),
+                        'Email': item.get('xfhg', '')
                     }
                     faculty_list.append(faculty_info)
                 
